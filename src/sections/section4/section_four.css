@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.section.s4 {
+  position: relative;
+  background: linear-gradient(160deg, rgb(7, 50, 80), rgb(1, 23, 27));
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section.s4 h1 {
+  color: rgba(255, 255, 255, 0.795);
+  font-family: "Varela Round", sans-serif;
+  font-size: 28px;
+  display: flex;
+  text-transform: uppercase;
+  margin-top: 30px;
+  gap: 10px;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.section.s4.active h1 {
+  animation: show 0.3s ease-out 1.1s forwards;
+}
+
+.section.s4 h1 span {
+  background: linear-gradient(90deg, rgb(118, 178, 255), rgb(250, 122, 250));
+  font-weight: 600;
+  font-family: "Varela Round", sans-serif;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section.s4 .streams-container {
+  position: relative;
+  margin-top: 30px;
+  width: 85%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.section.s4 .streams-container .stream {
+  width: 40%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+  pointer-events: none;
+}
+
+.section.s4 .streams-container .stream video {
+  position: absolute;
+  width: 100%;
+  border: 2px solid rgba(230, 250, 247, 0.445);
+  border-radius: 10px;
+}
+
+.section.s4 .streams-container .stream.stream1 {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.section.s4 .streams-container .stream.stream2 {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.section.s4 .streams-container .stream.stream3 {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.section.s4 .streams-container .stream.stream4 {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.section.s4.active .streams-container .stream.stream1 {
+  animation: show 0.5s ease-out 0.2s forwards;
+  pointer-events: all;
+}
+.section.s4.active .streams-container .stream.stream2 {
+  animation: show 0.5s ease-out 0.4s forwards;
+  pointer-events: all;
+}
+.section.s4.active .streams-container .stream.stream3 {
+  animation: show 0.5s ease-out 0.6s forwards;
+  pointer-events: all;
+}
+.section.s4.active .streams-container .stream.stream4 {
+  animation: show 0.5s ease-out 0.8s forwards;
+  pointer-events: all;
+}
+
+@media (max-width: 850px) {
+  .section.s4 h1 {
+    color: rgba(255, 255, 255, 0.795);
+    font-family: "Varela Round", sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+    gap: 10px;
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  .section.s4 .streams-container {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: scroll;
+  }
+
+  .section.s4 .streams-container .stream {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section.s4 .streams-container .stream.stream1 {
+    transform: translateX(0) scale(0);
+    opacity: 0;
+    transition: 0.2s ease-out;
+  }
+  .section.s4 .streams-container .stream.stream2 {
+    transform: translateX(0) scale(0);
+    opacity: 0;
+    transition: 0.4s ease-out;
+  }
+  .section.s4 .streams-container .stream.stream3 {
+    transform: translateX(0) scale(0);
+    opacity: 0;
+    transition: 0.6s ease-out;
+  }
+  .section.s4 .streams-container .stream.stream4 {
+    transform: translateX(0) scale(0);
+    opacity: 0;
+    transition: 0.8s ease-out;
+  }
+
+  .section.s4.active .streams-container .stream.stream1 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  .section.s4.active .streams-container .stream.stream2 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  .section.s4.active .streams-container .stream.stream3 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  .section.s4.active .streams-container .stream.stream4 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}

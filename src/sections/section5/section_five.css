@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.section.s5 {
+  background: linear-gradient(140deg, rgb(33, 81, 116), rgb(1, 16, 19));
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section.s5::before {
+  position: absolute;
+  content: "";
+  aspect-ratio: 1/1;
+  height: 360px;
+  border-radius: 50%;
+  background: rgb(0, 255, 255);
+  filter: blur(150px);
+  top: 5%;
+  left: 10%;
+  transform: scale(0);
+  transform-origin: bottom;
+  opacity: 0;
+}
+
+.section.s5.active::before {
+  animation: reveal 1s ease-out 1s forwards;
+}
+
+.section.s5 h1 {
+  color: rgba(255, 255, 255, 0.877);
+  font-size: 70px;
+  font-weight: 900;
+  font-family: "Varela Round", sans-serif;
+  transform: translateY(120px);
+  opacity: 0;
+}
+
+.section.s5.active h1 {
+  animation: show 0.6s ease-out 0.3s forwards;
+}
+
+.section.s5 .socials {
+  margin-bottom: 120px;
+}
+
+.section.s5 .socials .icon {
+  color: rgb(222, 244, 245);
+  font-size: 80px;
+  margin: 0 40px;
+  cursor: pointer;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: color 0.1s ease-out;
+}
+
+.section.s5.active .icon {
+  animation: show 0.6s ease-out forwards;
+  animation-delay: calc(var(--i) * 300ms);
+}
+
+.section.s5 .to-top {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.section.s5.active .to-top {
+  animation: show 0.6s ease-out 1.4s forwards;
+}
+
+.section.s5 .to-top a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.section.s5 .to-top a:hover {
+  color: rgb(171, 240, 240);
+}
+.section.s5.active .icon:nth-child(1):hover {
+  color: rgb(160, 78, 255);
+}
+.section.s5.active .icon:nth-child(2):hover {
+  color: rgb(247, 0, 144);
+}
+.section.s5.active .icon:nth-child(3):hover {
+  color: rgb(0, 131, 253);
+}
+
+@media screen {
+}
